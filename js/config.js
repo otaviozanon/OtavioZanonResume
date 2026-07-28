@@ -1,15 +1,18 @@
 /*
- * config.js — PERSONAL DATA
+ * config.js - PERSONAL DATA
  * Edit ONLY this file to change name, skills, experience, projects, links, etc.
  * No need to touch any other file.
  */
 
 window.__CONFIG = {
+  /* --- language ----------------------------------------------------------- */
+  lang: "en",
+
   /* --- identity ---------------------------------------------------------- */
   username: "otaviozanon",
   siteTitle: "otaviozanon@github ~ interactive terminal",
   tagline: "Front-End Developer",
-  metaDescription: "Otavio Zanon — interactive terminal-style GitHub profile.",
+  metaDescription: "Otavio Zanon - interactive terminal-style GitHub profile.",
 
   /* --- banner ASCII (page header) ---------------------------------------- */
   banner:
@@ -45,7 +48,7 @@ window.__CONFIG = {
     "Brazilian, Curitiba/PR, Brazil",
     "Front-End Engineer with 8+ years of experience in Web Development and Process Optimization.",
     "Proficient in various technologies and equipped with a versatile, adaptable skill set",
-    "Collaborative, results-driven, and proactive — strong code-review and pair-programming culture.",
+    "Collaborative, results-driven and proactive, strong code-review and pair-programming culture.",
     "Always expanding knowledge, exploring new technologies and continuously evolving.",
   ],
 
@@ -64,7 +67,7 @@ window.__CONFIG = {
       role: "Frontend Engineer",
       company: "Fohat",
       summary:
-        "Agile development of internal applications — features, bug fixes and task management.",
+        "Agile development of internal applications, features, bug fixes and task management.",
       tech: "React, Next.js, GraphQL, PostgreSQL",
     },
     {
@@ -72,7 +75,7 @@ window.__CONFIG = {
       role: "FullStack Developer",
       company: "BRX Retail",
       summary:
-        "Agile development of internal applications — features, bug fixes and task management.",
+        "Agile development of internal applications, features, bug fixes and task management.",
       tech: ".NET Core, C#, ASP.NET MVC, Angular, TypeScript",
     },
     {
@@ -80,7 +83,7 @@ window.__CONFIG = {
       role: "Process Developer",
       company: "Volvo Group",
       summary:
-        "Lead the first Industry 4.0 team at Volvo do Brasil — cost reduction and production support.",
+        "Lead the first Industry 4.0 team at Volvo do Brasil, cost reduction and production support.",
       tech: "React, IONIC, Node RED, Arduino, ShellScript, C#",
     },
     {
@@ -201,7 +204,7 @@ window.__CONFIG = {
         {
           name: "LiveWatch",
           description:
-            "Automated IPTV playlist — all triggered from a terminal-style web dashboard",
+            "Automated IPTV playlist, all triggered from a terminal-style web dashboard",
           tech: "JavaScript, HTML5, CSS3",
           live: "http://ozlivewatch.pages.dev",
           code: "https://github.com/otaviozanon/LiveWatch",
@@ -314,6 +317,183 @@ window.__CONFIG = {
   /* --- fallback data (optional) ------------------------------------------ */
   fallbackData: null,
 
-  /* --- matrix rain ------------------------------------------------------- */
-  matrixChars: "01OTAVIOZANON<>/{}[]#*",
+  /* --- i18n --------------------------------------------------------------- */
+  i18n: {
+    pt: {
+      /* identity */
+      "Front-End Developer": "Desenvolvedor Front-End",
+      "otaviozanon@github ~ interactive terminal":
+        "otaviozanon@github ~ terminal interativo",
+      "Otavio Zanon - interactive terminal-style GitHub profile.":
+        "Otavio Zanon - perfil interativo estilo terminal no GitHub.",
+
+      /* whoami */
+      "Brazilian, Curitiba/PR, Brazil": "Brasileiro, Curitiba/PR, Brasil",
+      "Front-End Engineer with 8+ years of experience in Web Development and Process Optimization.":
+        "Engenheiro Front-End com mais de 8 anos de experiência em Desenvolvimento Web e Otimização de Processos.",
+      "Proficient in various technologies and equipped with a versatile, adaptable skill set":
+        "Proficiente em diversas tecnologias e com um conjunto de habilidades versátil e adaptável",
+      "Collaborative, results-driven and proactive, strong code-review and pair-programming culture.":
+        "Colaborativo, focado em resultados e proativo, cultura sólida de code-review e pair-programming.",
+      "Always expanding knowledge, exploring new technologies and continuously evolving.":
+        "Sempre expandindo conhecimentos, explorando novas tecnologias e em constante evolução.",
+
+      /* experience - role */
+      "Frontend Engineer": "Engenheiro Frontend",
+      "FullStack Developer": "Desenvolvedor FullStack",
+      "Process Developer": "Desenvolvedor de Processos",
+      "Mobile Developer": "Desenvolvedor Mobile",
+
+      /* experience - summary */
+      "Front-end development for the world's leading furniture ERP. Driving React and UI innovations while defining processes and standards.":
+        "Desenvolvimento front-end para o principal ERP moveleiro do mundo. Liderando inovações em React e UI enquanto define processos e padrões.",
+      "Agile development of internal applications, features, bug fixes and task management.":
+        "Desenvolvimento ágil de aplicações internas, funcionalidades, correção de bugs e gestão de tarefas.",
+      "Lead the first Industry 4.0 team at Volvo do Brasil, cost reduction and production support.":
+        "Liderei a primeira equipe de Indústria 4.0 na Volvo do Brasil, redução de custos e suporte à produção.",
+      "Built Obra Prima App with web parity.":
+        "Desenvolvi o aplicativo Obra Prima com paridade web.",
+
+      /* education */
+      "Bachelor, Information Systems": "Bacharelado, Sistemas de Informação",
+
+      /* certifications */
+      "Development Web Applications with React":
+        "Desenvolvimento de Aplicações Web com React",
+      "LeanSixSigma Yellow Belt Certification":
+        "Certificação Lean Six Sigma Yellow Belt",
+      "LeanSixSigma White Belt Certification":
+        "Certificação Lean Six Sigma White Belt",
+      "OKR Methodology and Application": "Metodologia e Aplicação de OKRs",
+      "Oficina de Testes de Software": "Oficina de Testes de Software",
+      "Ethical Hacking": "Ethical Hacking",
+      "English Graduation": "Graduação em Inglês",
+      "Explorer Program": "Programa Explorer",
+
+      /* languages */
+      Advanced: "Avançado",
+      Native: "Nativo",
+      Basic: "Básico",
+      English: "Inglês",
+      Portuguese: "Português",
+      Spanish: "Espanhol",
+
+      /* skills categories */
+      languages: "linguagens",
+      frontend: "frontend",
+      styling: "estilização",
+      backend: "backend",
+      databases: "banco de dados",
+      cloud: "cloud",
+      tools: "ferramentas",
+
+      /* projects - categories */
+      sites: "sites",
+      utils: "utilidades",
+      desktop: "desktop",
+      games: "jogos",
+
+      /* projects - descriptions */
+      "Corporate website for a law firm with logistics tools":
+        "Site corporativo para escritório de advocacia com ferramentas logísticas",
+      "Nursery and early childhood center website":
+        "Site para berçário e centro de educação infantil",
+      "Service scheduling for beauty professionals":
+        "Agendamento de serviços para profissionais de beleza",
+      "Automatic esport calendar generator in .ics format.":
+        "Gerador automático de calendário de eSports em formato .ics.",
+      "Automated IPTV playlist, all triggered from a terminal-style web dashboard":
+        "Playlist IPTV automatizada, tudo acionado por um dashboard web estilo terminal",
+      "Online notepad to create and share code or what you want":
+        "Bloco de notas online para criar e compartilhar código ou o que quiser",
+      "Multi-provider file uploader with progress tracking":
+        "Uploader de arquivos multi-provedor com rastreamento de progresso",
+      "Windows optimization and gaming performance toolkit and extension":
+        "Kit de otimização do Windows e desempenho para jogos",
+      "Portable RAM optimizer. Uses native Windows APIs to safely clear memory.":
+        "Otimizador de RAM portátil. Usa APIs nativas do Windows para limpar memória com segurança.",
+      "Uno (Multiplayer)": "Uno (Multijogador)",
+      "A bluffing and trivia game (Multiplayer)":
+        "Jogo de blefe e curiosidades (Multijogador)",
+      "A true validator for the worst friend (Multiplayer)":
+        "Um validador de verdade para o pior amigo (Multijogador)",
+      "Blackjack - 21 (Multiplayer)": "Blackjack - 21 (Multijogador)",
+      "Blackjack PRO (Solo)": "Blackjack PRO (Solo)",
+
+      /* contact labels */
+      portfolio: "portfólio",
+      linkedin: "linkedin",
+      github: "github",
+      email: "email",
+      phone: "telefone",
+
+      /* footer */
+      "rendered client-side, no build step":
+        "renderizado no cliente, sem etapa de build",
+
+      /* terminal - help command */
+      "available commands:": "comandos disponíveis:",
+      whoami: "sobre",
+      experience: "experiencia",
+      education: "formacao",
+      skills: "habilidades",
+      projects: "projetos",
+      contact: "contato",
+      download: "baixar",
+      clear: "limpar",
+      "professional summary": "resumo profissional",
+      "work history": "histórico profissional",
+      "academic background & certifications":
+        "formação acadêmica & certificações",
+      "tech stack": "tecnologias",
+      "projects by category": "projetos por categoria",
+      "how to reach me": "como me encontrar",
+      "generate resume PDF": "gerar currículo em PDF",
+      "clear the terminal": "limpar o terminal",
+
+      /* terminal - misc */
+      "command not found: ": "comando não encontrado: ",
+      " - type 'help'": " - digite 'help'",
+      "opening ": "abrindo ",
+      "usage: open [": "uso: open [",
+      "connected to github.com/": "conectado a github.com/",
+      "type 'help' to see available commands":
+        "digite 'help' para ver os comandos disponíveis",
+      contributions: "contribuições",
+      "day streak": "dias seguidos",
+      "day best streak": "recorde de dias",
+      "in one day": "em um dia",
+      "> academic": "> acadêmico",
+      "> certifications": "> certificações",
+      "> languages": "> idiomas",
+      "tech:": "tech:",
+      "no projects configured": "nenhum projeto configurado",
+      "live:": "ao vivo:",
+      "code:": "código:",
+      "generating resume PDF...": "gerando currículo em PDF...",
+      "popup blocked - allow popups and try again":
+        "popup bloqueado - permita popups e tente novamente",
+      "no photo configured - add photoUrl in config.js":
+        "nenhuma foto configurada - adicione photoUrl em config.js",
+      "[sudo] password for ": "[sudo] senha para ",
+      "nice try. this is a static site.":
+        "boa tentativa. este é um site estático.",
+
+      /* resume PDF */
+      Contact: "Contato",
+      Languages: "Idiomas",
+      Skills: "Habilidades",
+      "Professional Profile": "Perfil Profissional",
+      Experience: "Experiência",
+      Education: "Formação",
+      Certifications: "Certificações",
+      " - Resume": " - Currículo",
+
+      /* page chrome */
+      "rendered client-side, no build step":
+        "renderizado no cliente, sem etapa de build",
+      "type <kbd>help</kbd> to see commands · try <kbd>projects</kbd>, <kbd>skills</kbd>, or <kbd>experience</kbd>":
+        "digite <kbd>help</kbd> para ver comandos · experimente <kbd>projects</kbd>, <kbd>skills</kbd> ou <kbd>experience</kbd>",
+    },
+  },
 };

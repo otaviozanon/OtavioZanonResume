@@ -5,6 +5,12 @@
 
   var config = window.__CONFIG;
 
+  function tc(str) {
+    if (!config.i18n || !config.i18n.pt) return str;
+    if (config.lang !== "pt") return str;
+    return config.i18n.pt[str] || str;
+  }
+
   if (!config || !config.username) {
     document.body.innerHTML =
       '<div style="color:#ff5f56;padding:32px;font-family:monospace;">' +
@@ -13,11 +19,12 @@
     return;
   }
 
-  document.title = config.siteTitle || config.username + "@github ~ interactive terminal";
+  document.title =
+    tc(config.siteTitle) || config.username + "@github ~ interactive terminal";
 
   var descMeta = document.querySelector('meta[name="description"]');
   if (descMeta) {
-    descMeta.setAttribute("content", config.metaDescription || "");
+    descMeta.setAttribute("content", tc(config.metaDescription) || "");
   }
 
   var bannerEl = document.getElementById("bannerArt");
@@ -27,7 +34,7 @@
 
   var taglineEl = document.querySelector(".tagline");
   if (taglineEl && config.tagline) {
-    taglineEl.textContent = config.tagline;
+    taglineEl.textContent = tc(config.tagline);
   }
 
   var titleLabel = document.querySelector(".titlebar .label");
@@ -50,7 +57,7 @@
         '<a href="' +
         link.url +
         '" target="_blank" rel="noopener">' +
-        link.label +
+        tc(link.label) +
         "</a>";
       if (i < keys.length - 1) html += "·";
     });
@@ -59,7 +66,15 @@
 
   var footerTagline = document.querySelector("footer .tagline-text");
   if (footerTagline) {
-    footerTagline.textContent = config.footer ? config.footer.tagline || "" : "";
+    footerTagline.textContent = config.footer
+      ? tc(config.footer.tagline || "")
+      : "";
+  }
+
+  /* rendered text in footer */
+  var footerRendered = document.querySelector("footer div:last-child");
+  if (footerRendered && config.footer && config.footer.rendered) {
+    footerRendered.textContent = tc(config.footer.rendered);
   }
 
   window.__Terminal.init(
@@ -67,6 +82,6 @@
     document.getElementById("cmdInput"),
     document.getElementById("tooltip"),
     config,
-    window.__Heatmap
+    window.__Heatmap,
   );
 })();

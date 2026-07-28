@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
 
 :root {
   --bg: #0d1117;
@@ -29,7 +29,8 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--white);
-  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 body {
@@ -105,9 +106,15 @@ a:hover {
   border-radius: 50%;
 }
 
-.dot:nth-child(1) { background: var(--red); }
-.dot:nth-child(2) { background: var(--yellow); }
-.dot:nth-child(3) { background: #27c93f; }
+.dot:nth-child(1) {
+  background: var(--red);
+}
+.dot:nth-child(2) {
+  background: var(--yellow);
+}
+.dot:nth-child(3) {
+  background: #27c93f;
+}
 
 .titlebar .label {
   position: absolute;
@@ -116,6 +123,29 @@ a:hover {
   text-align: center;
   color: var(--muted);
   font-size: 11px;
+  pointer-events: none;
+}
+
+.lang-toggle {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--frame);
+  border-radius: 4px;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+.lang-toggle:hover {
+  color: var(--white);
+  border-color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .term {
@@ -238,7 +268,9 @@ a:hover {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* hint */
