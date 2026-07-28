@@ -2,6 +2,10 @@
 
 Toggle **EN** / **PT-BR** via the titlebar button. All output, commands, and the PDF export are translated.
 
+<p align="center">
+  <a href="https://otaviozanonresume.vercel.app/"><strong>Otavio Zanon Resume</strong></a>
+</p>
+
 ## Commands
 
 | EN               | PT            |                                         |
