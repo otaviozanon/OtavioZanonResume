@@ -41,6 +41,8 @@ window.__CONFIG = {
 
   /* --- command: whoami --------------------------------------------------- */
   whoami: [
+    "Otavio Zanon",
+    "Brazilian, Curitiba/PR, Brazil",
     "Front-End Engineer with 8+ years of experience in Web Development and Process Optimization.",
     "Proficient in various technologies and equipped with a versatile, adaptable skill set",
     "Collaborative, results-driven, and proactive — strong code-review and pair-programming culture.",
@@ -131,15 +133,31 @@ window.__CONFIG = {
     { year: "2013", name: "English Graduation", issuer: "CCAA" },
   ],
 
+  /* --- languages (shown inside education command) -------------------------- */
+  languages: [
+    { level: "Advanced", language: "English" },
+    { level: "Native", language: "Portuguese" },
+    { level: "Basic", language: "Spanish" },
+  ],
+
   /* --- command: skills --------------------------------------------------- */
   skillCategories: [
     { category: "languages", items: "JavaScript, TypeScript, Python, C#" },
     { category: "frontend", items: "React, Next.js, Angular, Redux" },
-    { category: "styling", items: "TailwindCSS, Bootstrap, AntDesign, Less, DevExtreme" },
+    {
+      category: "styling",
+      items: "TailwindCSS, Bootstrap, AntDesign, Less, DevExtreme",
+    },
     { category: "backend", items: "Node.js, .NET Core, ASP.NET MVC, GraphQL" },
-    { category: "databases", items: "MySQL, PostgreSQL, SQLite, SQL Server, Supabase, Firebase" },
+    {
+      category: "databases",
+      items: "MySQL, PostgreSQL, SQLite, SQL Server, Supabase, Firebase",
+    },
     { category: "cloud", items: "AWS, Azure, Cloudflare, Vercel" },
-    { category: "tools", items: "Git, Vite, Docker, PowerShell, Scrum, Microsoft DevOps" },
+    {
+      category: "tools",
+      items: "Git, Vite, Docker, PowerShell, Scrum, Microsoft DevOps",
+    },
   ],
 
   /* --- command: projects (grouped by category) --------------------------- */
@@ -278,6 +296,7 @@ window.__CONFIG = {
     ],
     ["github", "https://github.com/otaviozanon", "github.com/otaviozanon"],
     ["email", "mailto:otaviozanonn@icloud.com", "otaviozanonn@icloud.com"],
+    ["phone", "tel:+5541997861980", "+55 41 99786-1980"],
   ],
 
   /* --- footer ------------------------------------------------------------ */

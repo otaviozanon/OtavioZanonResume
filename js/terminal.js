@@ -173,6 +173,262 @@ window.__Terminal = (function () {
     return window.__Heatmap.build(tooltip, contributionData.days);
   }
 
+  function buildResumeHTML() {
+    var whoami = appConfig.whoami || [];
+    var experience = appConfig.experience || [];
+    var education = appConfig.education || [];
+    var certifications = appConfig.certifications || [];
+    var languages = appConfig.languages || [];
+    var skillCategories = appConfig.skillCategories || [];
+    var contact = appConfig.contact || [];
+
+    var name = whoami[0] || appConfig.username;
+    var tagline = whoami[2] || appConfig.tagline;
+    var location = whoami[1] || "";
+    var summaryLines = whoami.slice(3);
+
+    function phoneFromContact() {
+      var item = contact.filter(function (c) { return c[0] === "phone"; })[0];
+      return item ? item[2] : "";
+    }
+    function emailFromContact() {
+      var item = contact.filter(function (c) { return c[0] === "email"; })[0];
+      return item ? item[2] : "";
+    }
+
+    var expHtml = experience
+      .map(function (exp) {
+        return (
+          '<div class="exp-item">' +
+          '<div class="exp-head">' +
+          '<span class="exp-title">' +
+          escapeHtml(exp.role) +
+          "</span>" +
+          '<span class="exp-company">' +
+          escapeHtml(exp.company) +
+          "</span>" +
+          '<span class="exp-date">' +
+          escapeHtml(exp.period) +
+          "</span>" +
+          "</div>" +
+          '<p class="exp-desc">' +
+          escapeHtml(exp.summary) +
+          "</p>" +
+          '<p class="exp-tech">' +
+          escapeHtml(exp.tech) +
+          "</p>" +
+          "</div>"
+        );
+      })
+      .join("");
+
+    var eduHtml = education
+      .map(function (edu) {
+        return (
+          '<div class="exp-item" style="margin-bottom:0;padding-bottom:0;border:0">' +
+          '<div class="exp-head">' +
+          '<span class="exp-title">' +
+          escapeHtml(edu.degree) +
+          "</span>" +
+          '<span class="exp-company">' +
+          escapeHtml(edu.institution) +
+          "</span>" +
+          '<span class="exp-date">' +
+          escapeHtml(edu.period) +
+          "</span>" +
+          "</div>" +
+          "</div>"
+        );
+      })
+      .join("");
+
+    var certHtml = certifications
+      .map(function (cert) {
+        return (
+          '<div class="cert-chip">' +
+          escapeHtml(cert.name) +
+          ' <span class="cert-year">' +
+          escapeHtml(cert.year) +
+          "</span>" +
+          "</div>"
+        );
+      })
+      .join("");
+
+    var langHtml = languages
+      .map(function (lang) {
+        return (
+          '<div class="lang-row">' +
+          '<span class="lang-name">' +
+          escapeHtml(lang.language) +
+          "</span>" +
+          '<span class="lang-level">' +
+          escapeHtml(lang.level) +
+          "</span>" +
+          "</div>"
+        );
+      })
+      .join("");
+
+    var skillsHtml = skillCategories
+      .map(function (cat) {
+        return (
+          '<div class="skill-row">' +
+          '<span class="skill-cat">' +
+          escapeHtml(cat.category) +
+          "</span>" +
+          '<span class="skill-items">' +
+          escapeHtml(cat.items) +
+          "</span>" +
+          "</div>"
+        );
+      })
+      .join("");
+
+    var summaryHtml = summaryLines
+      .map(function (line) {
+        return "<p>" + escapeHtml(line) + "</p>";
+      })
+      .join("");
+
+    return (
+      "<!DOCTYPE html>" +
+      '<html lang="en"><head><meta charset="utf-8">' +
+      "<title>" +
+      escapeHtml(name) +
+      " — Resume</title>" +
+      "<style>" +
+      "*{margin:0;padding:0;box-sizing:border-box}" +
+      "body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-size:11px;line-height:1.55;color:#1e293b;background:#e2e8f0}" +
+      "@media print{body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}}" +
+      ".page{max-width:210mm;margin:0 auto;background:#fff;overflow:hidden}" +
+      ".top-stripe{height:5px;background:linear-gradient(90deg,#1e3a5f,#2563eb,#3b82f6,#60a5fa)}" +
+      ".header{padding:28px 36px 20px;position:relative}" +
+      ".header h1{font-size:30px;font-weight:800;color:#0f172a;letter-spacing:-0.5px;margin-bottom:2px}" +
+      ".header .tagline{font-size:14px;color:#3b82f6;font-weight:600;margin-bottom:10px}" +
+      ".header .meta{font-size:11px;color:#94a3b8;display:flex;gap:6px;flex-wrap:wrap}" +
+      ".header .meta span{display:flex;align-items:center}" +
+      ".header .meta span+span::before{content:'·';margin:0 6px;color:#cbd5e1;font-weight:700}" +
+      ".body-cols{display:flex;border-top:1px solid #e2e8f0}" +
+      ".sidebar{width:30%;background:#0f172a;color:#e2e8f0;padding:26px 22px}" +
+      ".main{width:70%;padding:24px 30px 26px}" +
+      ".sb-section{padding-bottom:16px;margin-bottom:0;border-bottom:1px solid #1a2235}" +
+      ".sb-section:last-child{border-bottom:0;padding-bottom:0}" +
+      ".sb-section h3{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#60a5fa;margin-bottom:12px}" +
+      ".sb-contact{font-size:11px;line-height:2.1;color:#cbd5e1}" +
+      ".sb-contact a{color:#93c5fd;text-decoration:none;border-bottom:1px dotted #334155;padding-bottom:1px}" +
+      ".sb-contact .contact-row{display:flex;align-items:center;gap:8px;padding:3px 0}" +
+      ".sb-contact .contact-row:not(:last-child){border-bottom:1px solid #1a2235}" +
+      ".sb-contact .contact-dot{width:6px;height:6px;border-radius:50%;background:#3b82f6;flex-shrink:0}" +
+      ".lang-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;font-size:11px}" +
+      ".lang-name{font-weight:600;color:#f8fafc}" +
+      ".lang-level{color:#94a3b8;font-size:10px;font-style:italic}" +
+      ".skill-row{margin-bottom:9px}" +
+      ".skill-cat{display:block;font-size:10px;font-weight:600;color:#60a5fa;text-transform:uppercase;letter-spacing:0.6px;margin-bottom:3px}" +
+      ".skill-items{display:block;font-size:10.5px;color:#cbd5e1;line-height:1.6}" +
+      ".main-section{margin-bottom:20px}" +
+      ".main-section h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.8px;color:#94a3b8;margin-bottom:14px;padding-bottom:6px;border-bottom:1px solid #e2e8f0;position:relative}" +
+      ".main-section h2::after{content:'';position:absolute;bottom:-1px;left:0;width:36px;height:2px;background:#3b82f6}" +
+      ".main-section.profile p{font-size:10.5px;color:#475569;margin-bottom:5px;line-height:1.65}" +
+      ".main-section.profile p:first-child{font-size:11.5px;color:#0f172a;font-weight:600}" +
+      ".exp-item{position:relative;margin-bottom:16px;padding-bottom:14px;padding-left:16px;border-bottom:1px solid #f1f5f9}" +
+      ".exp-item:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}" +
+      ".exp-item::before{content:'';position:absolute;left:0;top:4px;bottom:4px;width:3px;border-radius:2px;background:#cbd5e1}" +
+      ".exp-item:first-of-type::before{background:#3b82f6}" +
+      ".exp-item:first-of-type .exp-date{background:#dbeafe;color:#2563eb}" +
+      ".exp-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:3px}" +
+      ".exp-title{font-size:13px;font-weight:700;color:#0f172a}" +
+      ".exp-company{font-size:11.5px;color:#3b82f6;font-weight:600}" +
+      ".exp-date{font-size:10px;color:#94a3b8;font-weight:500;margin-left:auto;background:#f1f5f9;padding:2px 8px;border-radius:4px}" +
+      ".exp-desc{font-size:10.5px;color:#475569;line-height:1.55;margin:4px 0 5px}" +
+      ".exp-tech{font-size:9.5px;color:#64748b;font-style:italic}" +
+      ".certs-grid{display:flex;flex-wrap:wrap;gap:7px 8px}" +
+      ".cert-chip{font-size:10.5px;color:#334155;background:#f0f7ff;padding:5px 14px;border-radius:20px;white-space:nowrap;border:1px solid #bfdbfe;font-weight:500}" +
+      ".cert-chip .cert-year{color:#3b82f6;font-size:9.5px;font-weight:700;margin-left:4px}" +
+      ".footer{text-align:center;font-size:8.5px;color:#cbd5e1;padding:8px 28px 10px}" +
+      "@media print{@page{margin:0;size:A4}.page{box-shadow:none}}" +
+      "</style></head><body>" +
+      '<div class="page">' +
+      '<div class="top-stripe"></div>' +
+      '<div class="header">' +
+      "<h1>" +
+      escapeHtml(name) +
+      "</h1>" +
+      '<div class="tagline">' +
+      escapeHtml(tagline) +
+      "</div>" +
+      '<div class="meta">' +
+      '<span>' +
+      escapeHtml(location) +
+      "</span>" +
+      '<span>' +
+      emailFromContact() +
+      "</span>" +
+      '<span>' +
+      phoneFromContact() +
+      "</span>" +
+      "</div>" +
+      "</div>" +
+      '<div class="body-cols">' +
+      '<div class="sidebar">' +
+      '<div class="sb-section">' +
+      '<h3>Contact</h3>' +
+      '<div class="sb-contact">' +
+      '<div class="contact-row"><span class="contact-dot"></span>' +
+      emailFromContact() +
+      "</div>" +
+      '<div class="contact-row"><span class="contact-dot"></span>' +
+      phoneFromContact() +
+      "</div>" +
+      '<div class="contact-row"><span class="contact-dot"></span><a href="' +
+      (appConfig.openLinks.github ? appConfig.openLinks.github.url : "#") +
+      '">github/' +
+      escapeHtml(appConfig.username) +
+      "</a></div>" +
+      '<div class="contact-row"><span class="contact-dot"></span><a href="' +
+      (appConfig.openLinks.linkedin ? appConfig.openLinks.linkedin.url : "#") +
+      '">linkedin/in/otavio-zanon</a></div>' +
+      '<div class="contact-row"><span class="contact-dot"></span><a href="' +
+      (appConfig.openLinks.portfolio ? appConfig.openLinks.portfolio.url : "#") +
+      '">otaviozanon.vercel.app</a></div>' +
+      "</div>" +
+      "</div>" +
+      '<div class="sb-section">' +
+      '<h3>Languages</h3>' +
+      langHtml +
+      "</div>" +
+      '<div class="sb-section">' +
+      '<h3>Skills</h3>' +
+      skillsHtml +
+      "</div>" +
+      "</div>" +
+      '<div class="main">' +
+      '<div class="main-section profile">' +
+      '<h2>Professional Profile</h2>' +
+      summaryHtml +
+      "</div>" +
+      '<div class="main-section">' +
+      '<h2>Experience</h2>' +
+      expHtml +
+      "</div>" +
+      '<div class="main-section">' +
+      '<h2>Education</h2>' +
+      eduHtml +
+      "</div>" +
+      '<div class="main-section">' +
+      '<h2>Certifications</h2>' +
+      '<div class="certs-grid">' +
+      certHtml +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      "</div>" +
+      '<div class="footer">otaviozanon.github.io</div>' +
+      "</div>" +
+      "</body></html>"
+    );
+  }
+
   var COMMANDS = {
     help: function () {
       line('<span class="out-white">available commands:</span>');
@@ -183,6 +439,7 @@ window.__Terminal = (function () {
         ["skills", "tech stack"],
         ["projects", "projects by category"],
         ["contact", "how to reach me"],
+        ["download", "generate resume PDF"],
         ["clear", "clear the terminal"],
       ].forEach(function (entry) {
         line(
@@ -243,6 +500,18 @@ window.__Terminal = (function () {
             escapeHtml(edu.degree) +
             '</span> <span class="out-dim">— ' +
             escapeHtml(edu.institution) +
+            "</span>",
+        );
+      });
+
+      blank();
+      line('<span class="out-green">&gt; languages</span>');
+      (appConfig.languages || []).forEach(function (lang) {
+        line(
+          '  <span class="out-green">' +
+            escapeHtml(lang.level).padEnd(13) +
+            '</span><span class="out-white">' +
+            escapeHtml(lang.language) +
             "</span>",
         );
       });
@@ -350,6 +619,22 @@ window.__Terminal = (function () {
         );
       });
       blank();
+    },
+
+    download: function () {
+      line('<span class="out-dim">generating resume PDF...</span>');
+      var html = buildResumeHTML();
+      var w = window.open("", "_blank");
+      if (!w) {
+        line('<span class="out-yellow">popup blocked — allow popups and try again</span>');
+        return;
+      }
+      w.document.write(html);
+      w.document.close();
+      w.focus();
+      setTimeout(function () {
+        w.print();
+      }, 400);
     },
 
     photo: function () {
