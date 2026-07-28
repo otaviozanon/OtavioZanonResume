@@ -2,6 +2,10 @@
 
 Interactive terminal-style resume/curriculum.
 
+<p align="center">
+  <a href="https://otaviozanonresume.vercel.app/"><strong>Otavio Zanon Resume</strong></a>
+</p>
+
 ## Commands
 
 | Command      | Description                          |
