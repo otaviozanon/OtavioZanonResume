@@ -493,7 +493,7 @@ window.__CONFIG = {
       "rendered client-side, no build step":
         "renderizado no cliente, sem etapa de build",
       "type <kbd>help</kbd> to see commands · try <kbd>projects</kbd>, <kbd>skills</kbd>, or <kbd>experience</kbd>":
-        "digite <kbd>help</kbd> para ver comandos · experimente <kbd>projetos</kbd>, <kbd>habilidades</kbd> ou <kbd>experiência</kbd>",
+        "digite <kbd>help</kbd> para ver comandos · experimente <kbd>projetos</kbd>, <kbd>habilidades</kbd> ou <kbd>experiencia</kbd>",
     },
   },
 };
