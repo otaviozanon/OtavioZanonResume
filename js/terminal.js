@@ -35,6 +35,7 @@ window.__Terminal = (function () {
     }
 
     loadData();
+    updateChrome();
     boot();
   }
 
