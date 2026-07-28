@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>terminal</title>
+<meta name="description" content="Interactive terminal-style profile." />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="hero">
+    <pre id="bannerArt"></pre>
+    <div class="tagline"></div>
+  </div>
+
+  <div class="window">
+    <div class="titlebar">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="label">user@github: ~</div>
+    </div>
+    <div class="term" id="term"></div>
+    <div class="inputRow">
+      <span class="prompt-tag">user@github:~$</span>
+      <input id="cmdInput" autocomplete="off" autocapitalize="off" spellcheck="false" />
+      <span class="cursor" id="fakeCursor"></span>
+    </div>
+  </div>
+
+  <div class="hint">
+    type <kbd>help</kbd> to see commands · try <kbd>projects</kbd>, <kbd>skills</kbd>, or <kbd>experience</kbd>
+  </div>
+
+  <footer>
+    <div class="links"></div>
+    <div class="tagline-text"></div>
+    <div>rendered client-side, no build step</div>
+  </footer>
+
+</div>
+
+<div id="tooltip"></div>
+<canvas id="matrixCanvas"></canvas>
+
+<script src="js/config.js"></script>
+<script src="js/heatmap.js"></script>
+<script src="js/matrix.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
