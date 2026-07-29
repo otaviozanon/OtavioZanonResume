@@ -272,6 +272,7 @@ window.__Resume = (function () {
           </div>
         </div>
       </div>
+      <script>window.onload=function(){setTimeout(function(){window.print()},200)}</script>
       </body></html>`
       .replace(/^\s+/gm, "")
       .replace(/\n/g, "");

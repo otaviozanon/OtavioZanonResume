@@ -458,21 +458,31 @@ window.__Terminal = (function () {
         '<span class="out-dim">' + t("generating resume PDF...") + "</span>",
       );
       var html = window.__Resume.build(appConfig, escapeHtml, t);
-      var w = window.open("", "_blank");
+      var blob = new Blob([html], { type: "text/html" });
+      var url = URL.createObjectURL(blob);
+      var w = window.open(url, "_blank");
       if (!w) {
-        line(
-          '<span class="out-yellow">' +
-            t("popup blocked - allow popups and try again") +
-            "</span>",
-        );
-        return;
+        try {
+          var a = document.createElement("a");
+          a.href = url;
+          a.target = "_blank";
+          a.style.display = "none";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        } catch (e) {
+          line(
+            '<span class="out-yellow">' +
+              t("popup blocked - allow popups and try again") +
+              "</span>",
+          );
+          URL.revokeObjectURL(url);
+          return;
+        }
       }
-      w.document.write(html);
-      w.document.close();
-      w.focus();
       setTimeout(function () {
-        w.print();
-      }, 400);
+        URL.revokeObjectURL(url);
+      }, 120000);
     },
 
     photo: function () {
