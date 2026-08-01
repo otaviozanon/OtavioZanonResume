@@ -285,6 +285,13 @@ window.__CONFIG = {
           live: "http://blackjack-pro-seven.vercel.app",
           code: "https://github.com/otaviozanon/Blackjack",
         },
+        {
+          name: "Lantern",
+          description: "Roll & Write Adventure (Solo)",
+          tech: "React, TypeScript, TailwindCSS, Vite",
+          live: "https://lanterngame.vercel.app",
+          code: "https://github.com/otaviozanon/Lantern",
+        },
       ],
     },
   ],
@@ -419,6 +426,7 @@ window.__CONFIG = {
         "Um validador de verdade para o pior amigo (Multijogador)",
       "Blackjack - 21 (Multiplayer)": "Blackjack - 21 (Multijogador)",
       "Blackjack PRO (Solo)": "Blackjack PRO (Solo)",
+      "Roll & Write Adventure (Solo)": "Aventura Roll & Write (Solo)",
 
       /* contact labels */
       portfolio: "portfólio",
