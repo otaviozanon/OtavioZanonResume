@@ -32,3 +32,7 @@ js/heatmap.js     contribution heatmap
 js/main.js        bootstrap & chrome
 css/style.css     terminal theme
 ```
+
+## 📄 License
+
+GPL-3.0. See [LICENSE](/LICENSE).
