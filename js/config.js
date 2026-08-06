@@ -224,6 +224,14 @@ window.__CONFIG = {
           live: "https://settfile.onrender.com",
           code: "https://github.com/otaviozanon/settfile",
         },
+        {
+          name: "SETTheme",
+          description:
+            "Dark VS Code theme with golden highlights for operators and keywords",
+          tech: "JSON, Node.js",
+          live: "",
+          code: "https://github.com/otaviozanon/SettTheme",
+        },
       ],
     },
     {
@@ -415,6 +423,8 @@ window.__CONFIG = {
         "Bloco de notas online para criar e compartilhar código ou o que quiser",
       "Multi-provider file uploader with progress tracking":
         "Uploader de arquivos multi-provedor com rastreamento de progresso",
+      "Dark VS Code theme with golden highlights for operators and keywords":
+        "Tema dark para VS Code com destaque dourado em operadores e keywords",
       "Windows optimization and gaming performance toolkit and extension":
         "Kit de otimização do Windows e desempenho para jogos",
       "Portable RAM optimizer. Uses native Windows APIs to safely clear memory.":
