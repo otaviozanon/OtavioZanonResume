@@ -228,7 +228,7 @@ window.__CONFIG = {
           name: "SETTheme",
           description:
             "Dark VS Code theme with golden highlights for operators and keywords",
-          tech: "JSON, Node.js",
+          tech: "VS Code, JSON",
           live: "",
           code: "https://github.com/otaviozanon/SettTheme",
         },
