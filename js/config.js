@@ -232,6 +232,14 @@ window.__CONFIG = {
           live: "",
           code: "https://github.com/otaviozanon/SettTheme",
         },
+        {
+          name: "SettVPN",
+          description:
+            "Free VPN client for Windows with one-click connect, auto-updating servers, and SOCKS5 proxy",
+          tech: "PowerShell, C#, v2ray-core",
+          live: "",
+          code: "https://github.com/otaviozanon/SettVPN",
+        },
       ],
     },
     {
@@ -425,6 +433,8 @@ window.__CONFIG = {
         "Uploader de arquivos multi-provedor com rastreamento de progresso",
       "Dark VS Code theme with golden highlights for operators and keywords":
         "Tema dark para VS Code com destaque dourado em operadores e keywords",
+      "Free VPN client for Windows with one-click connect, auto-updating servers, and SOCKS5 proxy":
+        "Cliente VPN gratuito para Windows com conexão em um clique, servidores atualizados automaticamente e proxy SOCKS5",
       "Windows optimization and gaming performance toolkit and extension":
         "Kit de otimização do Windows e desempenho para jogos",
       "Portable RAM optimizer. Uses native Windows APIs to safely clear memory.":
