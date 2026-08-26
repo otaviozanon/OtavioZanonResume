@@ -233,12 +233,12 @@ window.__CONFIG = {
           code: "https://github.com/otaviozanon/SettTheme",
         },
         {
-          name: "SettVPN",
+          name: "SETTUtilityExtension",
           description:
-            "Free VPN client for Windows with one-click connect, auto-updating servers, and SOCKS5 proxy",
-          tech: "PowerShell, C#, v2ray-core",
+            "All-in-one browser utility extension: volume booster, cache cleaner, multi-URL opener and YouTube enhancements",
+          tech: "JavaScript, HTML5, CSS3",
           live: "",
-          code: "https://github.com/otaviozanon/SettVPN",
+          code: "https://github.com/otaviozanon/SETTUtilityExtension",
         },
       ],
     },
@@ -260,6 +260,22 @@ window.__CONFIG = {
           tech: "C#, PowerShell",
           live: "",
           code: "https://github.com/otaviozanon/SETTMemoryCleaner",
+        },
+        {
+          name: "SettVPN",
+          description:
+            "Free VPN client for Windows with one-click connect, auto-updating servers, and SOCKS5 proxy",
+          tech: "PowerShell, C#, v2ray-core",
+          live: "",
+          code: "https://github.com/otaviozanon/SettVPN",
+        },
+        {
+          name: "SETTDash",
+          description:
+            "All-in-one Windows optimization & tweaking dashboard — cache cleaner, network optimizer, system tweaks, game mode, privacy, installers and more in a single dark WPF interface",
+          tech: "PowerShell, WPF",
+          live: "",
+          code: "https://github.com/otaviozanon/SETTDash",
         },
       ],
     },
@@ -447,6 +463,10 @@ window.__CONFIG = {
       "Blackjack - 21 (Multiplayer)": "Blackjack - 21 (Multijogador)",
       "Blackjack PRO (Solo)": "Blackjack PRO (Solo)",
       "Roll & Write Adventure (Solo)": "Aventura Roll & Write (Solo)",
+      "All-in-one browser utility extension: volume booster, cache cleaner, multi-URL opener and YouTube enhancements":
+        "Extensão utilitária de navegador completa: amplificador de volume, limpador de cache, abridor de múltiplas URLs e melhorias para o YouTube",
+      "All-in-one Windows optimization & tweaking dashboard — cache cleaner, network optimizer, system tweaks, game mode, privacy, installers and more in a single dark WPF interface":
+        "Painel completo de otimização e ajustes do Windows — limpador de cache, otimizador de rede, ajustes de sistema, modo jogo, privacidade, instaladores e mais em uma única interface WPF escura",
 
       /* contact labels */
       portfolio: "portfólio",
