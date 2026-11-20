@@ -265,7 +265,7 @@ window.__CONFIG = {
           name: "SettVPN",
           description:
             "Free VPN client for Windows with one-click connect, auto-updating servers, and SOCKS5 proxy",
-          tech: "PowerShell, C#, v2ray-core",
+          tech: "PowerShell, C#, Xray-core",
           live: "",
           code: "https://github.com/otaviozanon/SettVPN",
         },
