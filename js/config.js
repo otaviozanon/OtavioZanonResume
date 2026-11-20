@@ -197,7 +197,7 @@ window.__CONFIG = {
         {
           name: "EsportCalendar",
           description: "Automatic esport calendar generator in .ics format.",
-          tech: "JavaScript, HTML5, CSS3",
+          tech: "Python, JavaScript, HTML5, CSS3",
           live: "https://otaviozanon.github.io/esportCalendar",
           code: "https://github.com/otaviozanon/esportCalendar",
         },
@@ -225,7 +225,7 @@ window.__CONFIG = {
           code: "https://github.com/otaviozanon/settfile",
         },
         {
-          name: "SETTheme",
+          name: "SETT Theme",
           description:
             "Dark VS Code theme with golden highlights for operators and keywords",
           tech: "VS Code, JSON",
@@ -459,10 +459,10 @@ window.__CONFIG = {
         "Tema dark para VS Code com destaque dourado em operadores e keywords",
       "Free VPN client for Windows with one-click connect, auto-updating servers, and SOCKS5 proxy":
         "Cliente VPN gratuito para Windows com conexão em um clique, servidores atualizados automaticamente e proxy SOCKS5",
-      "Windows optimization and gaming performance toolkit and extension":
-        "Kit de otimização do Windows e desempenho para jogos",
       "Portable RAM optimizer. Uses native Windows APIs to safely clear memory.":
         "Otimizador de RAM portátil. Usa APIs nativas do Windows para limpar memória com segurança.",
+      "Wireless device battery levels and system monitoring (CPU/RAM/GPU/VRAM/temperatures) on the Windows 11 taskbar":
+        "Monitor de bateria de dispositivos sem fio e do sistema (CPU/RAM/GPU/VRAM/temperaturas) na barra de tarefas do Windows 11",
       "Uno (Multiplayer)": "Uno (Multijogador)",
       "A bluffing and trivia game (Multiplayer)":
         "Jogo de blefe e curiosidades (Multijogador)",
@@ -471,6 +471,8 @@ window.__CONFIG = {
       "Blackjack - 21 (Multiplayer)": "Blackjack - 21 (Multijogador)",
       "Blackjack PRO (Solo)": "Blackjack PRO (Solo)",
       "Roll & Write Adventure (Solo)": "Aventura Roll & Write (Solo)",
+      "Browser-based aim trainer with 3 modes (Flicking, Tracking, Speed), a real-time HUD and post-match performance analysis":
+        "Aim trainer no navegador com 3 modos (Flicking, Tracking, Speed), HUD em tempo real e análise de desempenho pós-partida",
       "All-in-one browser utility extension: volume booster, cache cleaner, multi-URL opener and YouTube enhancements":
         "Extensão utilitária de navegador completa: amplificador de volume, limpador de cache, abridor de múltiplas URLs e melhorias para o YouTube",
       "All-in-one Windows optimization & tweaking dashboard — cache cleaner, network optimizer, system tweaks, game mode, privacy, installers and more in a single dark WPF interface":
