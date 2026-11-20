@@ -246,12 +246,12 @@ window.__CONFIG = {
       category: "desktop",
       projects: [
         {
-          name: "SettUtility",
+          name: "SETTDash",
           description:
-            "Windows optimization and gaming performance toolkit and extension",
-          tech: "PowerShell",
+            "All-in-one Windows optimization & tweaking dashboard — cache cleaner, network optimizer, system tweaks, game mode, privacy, installers and more in a single dark WPF interface",
+          tech: "PowerShell, WPF",
           live: "",
-          code: "https://github.com/otaviozanon/SettUtility",
+          code: "https://github.com/otaviozanon/SETTDash",
         },
         {
           name: "SETTMemoryCleaner",
@@ -270,12 +270,12 @@ window.__CONFIG = {
           code: "https://github.com/otaviozanon/SettVPN",
         },
         {
-          name: "SETTDash",
+          name: "SETTMetter",
           description:
-            "All-in-one Windows optimization & tweaking dashboard — cache cleaner, network optimizer, system tweaks, game mode, privacy, installers and more in a single dark WPF interface",
-          tech: "PowerShell, WPF",
+            "Wireless device battery levels and system monitoring (CPU/RAM/GPU/VRAM/temperatures) on the Windows 11 taskbar",
+          tech: "Rust",
           live: "",
-          code: "https://github.com/otaviozanon/SETTDash",
+          code: "https://github.com/otaviozanon/SETTMetter",
         },
       ],
     },
@@ -323,6 +323,14 @@ window.__CONFIG = {
           tech: "React, TypeScript, TailwindCSS, Vite",
           live: "https://lanterngame.vercel.app",
           code: "https://github.com/otaviozanon/Lantern",
+        },
+        {
+          name: "AimSETT",
+          description:
+            "Browser-based aim trainer with 3 modes (Flicking, Tracking, Speed), a real-time HUD and post-match performance analysis",
+          tech: "JavaScript, React, Vite",
+          live: "https://aimsett.vercel.app",
+          code: "https://github.com/otaviozanon/AimSETT",
         },
       ],
     },
