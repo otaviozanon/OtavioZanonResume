@@ -277,6 +277,14 @@ window.__CONFIG = {
           live: "",
           code: "https://github.com/otaviozanon/SETTMetter",
         },
+        {
+          name: "SETTConverter",
+          description:
+            "Portable Windows file converter — images, PDF, video, audio, documents, fonts and archives, from the Explorer menu or command line",
+          tech: "Rust",
+          live: "",
+          code: "https://github.com/otaviozanon/SETTConverter",
+        },
       ],
     },
     {
@@ -477,6 +485,8 @@ window.__CONFIG = {
         "Extensão utilitária de navegador completa: amplificador de volume, limpador de cache, abridor de múltiplas URLs e melhorias para o YouTube",
       "All-in-one Windows optimization & tweaking dashboard — cache cleaner, network optimizer, system tweaks, game mode, privacy, installers and more in a single dark WPF interface":
         "Painel completo de otimização e ajustes do Windows — limpador de cache, otimizador de rede, ajustes de sistema, modo jogo, privacidade, instaladores e mais em uma única interface WPF escura",
+      "Portable Windows file converter — images, PDF, video, audio, documents, fonts and archives, from the Explorer menu or command line":
+        "Conversor de arquivos portátil para Windows — imagens, PDF, vídeo, áudio, documentos, fontes e arquivos compactados, pelo menu do Explorer ou linha de comando",
 
       /* contact labels */
       portfolio: "portfólio",
